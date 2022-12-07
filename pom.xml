@@ -15,23 +15,26 @@
     <description>SpringConfigServer</description>
     <properties>
         <java.version>19</java.version>
-        <spring-cloud.version>2022.0.0-RC2</spring-cloud.version>
+        <spring-cloud-dep.version>2022.0.0-RC2</spring-cloud-dep.version>
+        <spring-cloud.version>4.0.0-RC2</spring-cloud.version>
+        <spring.version>3.0.0</spring.version>
+        <resilience4j.version>1.7.0</resilience4j.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>3.0.0</version>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-server</artifactId>
-            <version>4.0.0-RC2</version>
+            <version>${spring-cloud.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <version>3.0.0</version>
+            <version>${spring.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -40,7 +43,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
+                <version>${spring-cloud-dep.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -52,7 +55,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>3.0.0</version>
+                <version>${spring.version}</version>
             </plugin>
         </plugins>
     </build>
